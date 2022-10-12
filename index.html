@@ -7,15 +7,24 @@
 
 <body>
     <script>
-        const numbers = [2, 42, 99];
-        // console.log(numbers);
-        // console.log(typeof numbers);
-        // console.log(typeof console);
-        // console.log(Array.isArray(numbers));
-        // console.log(Array.isArray(console));
-        for (let i = 0; i > numbers.length; i++) {
-            console.log(numbers[i]);
+        function oddCouple(arr) {
+            const odds = [];
+            for (let i = 0; i < arr.length; i++) {
+                const number = arr[i];
+                // if (number % 2 === 1 && odds.length < 2) {
+                //     odds.push(number);
+                // }
+                if (number % 2 === 1) {
+                    odds.push(number);
+                    if (odds.length === 2) {
+                        return odds;
+                    }
+                }
+            }
+            return odds;
         }
+        console.log(oddCouple([1, 2, 3, 6, 7]));
+        console.log(oddCouple([1, 2]));
     </script>
 </body>
 
